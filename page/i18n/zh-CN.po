@@ -1,0 +1,3 @@
+
+msgid "appName"
+msgstr "高考倒计时"

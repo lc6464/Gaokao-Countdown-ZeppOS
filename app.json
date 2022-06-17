@@ -1,0 +1,56 @@
+{
+	"configVersion": "v2",
+	"app": {
+		"appId": 1005191,
+		"appName": "高考倒计时",
+		"appType": "app",
+		"version": {
+			"code": 1,
+			"name": "0.1.0"
+		},
+		"icon": "icon.png",
+		"vender": "LC",
+		"description": "用于进行每年的高考倒计时，目标为当年的6月7日9:00，若在6月10日或更晚的日期，目标则为下一年的6月7日9:00。"
+	},
+	"permissions": [],
+	"runtime": {
+		"apiVersion": {
+			"compatible": "1.0.0",
+			"target": "1.0.1",
+			"minVersion": "1.0.0"
+		}
+	},
+	"debug": false,
+	"targets": {
+		"gtr3-pro": {
+			"module": {
+				"page": {
+					"pages": [
+						"page/gtr3-pro/home/index.page"
+					],
+					"window": {
+						"backgroundColor": "#000000",
+						"backgroundTextStyle": "dark"
+					}
+				}
+			},
+			"platforms": [
+				{
+					"name": "gtr3-pro",
+					"deviceSource": 229
+				},
+				{
+					"name": "gtr3-pro-w",
+					"deviceSource": 230
+				}
+			],
+			"designWidth": 480
+		}
+	},
+	"i18n": {
+		"zh-CN": {
+			"appName": "高考倒计时"
+		}
+	},
+	"defaultLanguage": "zh-CN"
+}
