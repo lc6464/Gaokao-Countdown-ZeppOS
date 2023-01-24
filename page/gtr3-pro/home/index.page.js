@@ -1,4 +1,5 @@
-import { TITLE, TIME } from './index.style';
+import { TITLE, TIME, TITLE_YEAR, TIME_LINE1, TIME_LINE2 } from './index.style';
+import { createSmoothTimer, stopSmoothTimer } from './smoothTimer';
 import Timer from './timer';
 
 let hmTimer;
@@ -7,15 +8,22 @@ Page({
 	build() {
 		logger.debug('page build invoked');
 
-		const title = hmUI.createWidget(hmUI.widget.TEXT, {
+		const title_year = hmUI.createWidget(hmUI.widget.TEXT, {
 			text: '加载中',
+			...TITLE_YEAR
+		});
+		const title = hmUI.createWidget(hmUI.widget.TEXT, {
+			text: '高考倒计时',
 			...TITLE
 		});
-		const countdown = hmUI.createWidget(hmUI.widget.TEXT, {
+		const countdown_line1 = hmUI.createWidget(hmUI.widget.TEXT, {
 			text: '加载中……',
-			...TIME
+			...TIME_LINE1
 		});
-
+		const countdown_line2 = hmUI.createWidget(hmUI.widget.TEXT, {
+			text: '',
+			...TIME_LINE2
+		});
 		const now = new Date,
 			endText = '高考已开始或已结束！';
 		let isEnd = false,
@@ -36,21 +44,23 @@ Page({
 			year = now.getFullYear() + 1;
 		}
 
-		title.setProperty(hmUI.prop.TEXT, `${year}年高考倒计时`);
+		title_year.setProperty(hmUI.prop.TEXT, `${year}年`);
 		if (isEnd) {
 			countdown.setProperty(hmUI.prop.TEXT, endText);
 		} else {
 			const countdownTimer = new Timer(new Date(year, 5, 7, 9, 0, 0));
-			hmTimer = timer.createTimer(
+			hmTimer = createSmoothTimer(
 				0,
 				1000,
 				function() {
 					const { days, hours, minutes, seconds, isCountdown } = countdownTimer.timing();
 					if (isCountdown) {
-						countdown.setProperty(hmUI.prop.TEXT, `${days}天${hours}时${minutes}分${seconds}秒`);
+						countdown_line1.setProperty(hmUI.prop.TEXT, `${days}天 ${hours}时`);
+						countdown_line2.setProperty(hmUI.prop.TEXT, `${minutes}分 ${seconds}秒`);
 					} else {
-						countdown.setProperty(hmUI.prop.TEXT, endText);
-						timer.stopTimer(hmTimer);
+						countdown_line1.setProperty(hmUI.prop.TEXT, '');
+						countdown_line2.setProperty(hmUI.prop.TEXT, endText);
+						stopSmoothTimer(hmTimer);
 					}
 				}
 			);
