@@ -22,31 +22,190 @@
 	},
 	"debug": false,
 	"targets": {
-		"gtr3-pro": {
-			"module": {
-				"page": {
-					"pages": [
-						"page/gtr3-pro/home/index.page"
-					],
-					"window": {
-						"backgroundColor": "#000000",
-						"backgroundTextStyle": "dark"
-					}
-				}
-			},
-			"platforms": [
-				{
-					"name": "gtr3-pro",
-					"deviceSource": 229
-				},
-				{
-					"name": "gtr3-pro-w",
-					"deviceSource": 230
-				}
-			],
-			"designWidth": 480
-		}
-	},
+    "480x480": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/480x480/home/index.page"
+          ],
+          "window": {
+            "navigationBarBackgroundColor": "#ffffff",
+            "navigationBarTextStyle": "black",
+            "navigationBarTitleText": "Hello World",
+            "backgroundColor": "#eeeeee",
+            "backgroundTextStyle": "light"
+          }
+        }
+      },
+      "platforms": [
+        {
+          "name": "gtr3-pro",
+          "deviceSource": 229
+        },
+        {
+          "name": "gtr3-pro-w",
+          "deviceSource": 230
+        },
+        {
+          "name": "gtr3-pro-l",
+          "deviceSource": 6095106
+        }
+        
+      ],
+      "designWidth": 480
+    },
+    "454x454": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/454x454/home/index.page"
+          ],
+          "window": {
+            "navigationBarBackgroundColor": "#ffffff",
+            "navigationBarTextStyle": "black",
+            "navigationBarTitleText": "Hello World",
+            "backgroundColor": "#eeeeee",
+            "backgroundTextStyle": "light"
+          }
+        }
+      },
+      "platforms": [
+        {
+          "name": "gtr3",
+          "deviceSource": 226
+        },
+        {
+          "name": "gtr3-w",
+          "deviceSource": 227
+        },
+        {
+          "name": "t-rex2",
+          "deviceSource": 418
+        },
+        {
+          "name": "t-rex2-w",
+          "deviceSource": 419
+        }
+      ],
+      "designWidth": 480
+    },
+    "390x450": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/390x450/home/index.page"
+          ],
+          "window": {
+            "navigationBarBackgroundColor": "#ffffff",
+            "navigationBarTextStyle": "black",
+            "navigationBarTitleText": "Hello World",
+            "backgroundColor": "#eeeeee",
+            "backgroundTextStyle": "light"
+          }
+        }
+      },
+      "platforms": [
+        {
+          "name": "gts3",
+          "deviceSource": 224
+        },
+        {
+          "name": "gts3-w",
+          "deviceSource": 225
+        },
+        {
+          "name": "gts4",
+          "deviceSource": 7995648
+        },
+        {
+          "name": "gts4-w",
+          "deviceSource": 7995649
+        }
+      ],
+      "designWidth": 480
+    },
+    "466x466": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/466x466/home/index.page"
+          ],
+          "window": {
+            "navigationBarBackgroundColor": "#ffffff",
+            "navigationBarTextStyle": "black",
+            "navigationBarTitleText": "Hello World",
+            "backgroundColor": "#eeeeee",
+            "backgroundTextStyle": "light"
+          }
+        }
+      },
+      "platforms": [
+        {
+          "name": "gtr4",
+          "deviceSource": 7930112
+        },
+        {
+          "name": "gtr4-w",
+          "deviceSource": 7930113
+        }
+      ],
+      "designWidth": 480
+    },
+    "416x416": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/416x416/home/index.page"
+          ],
+          "window": {
+            "navigationBarBackgroundColor": "#ffffff",
+            "navigationBarTextStyle": "black",
+            "navigationBarTitleText": "Hello World",
+            "backgroundColor": "#eeeeee",
+            "backgroundTextStyle": "light"
+          }
+        }
+      },
+      "platforms": [
+        {
+          "name": "falcon",
+          "deviceSource": 414
+        },
+        {
+          "name": "falcon-w",
+          "deviceSource": 415
+        }
+      ],
+      "designWidth": 480
+    },
+    "336x384": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/336x384/home/index.page"
+          ],
+          "window": {
+            "navigationBarBackgroundColor": "#ffffff",
+            "navigationBarTextStyle": "black",
+            "navigationBarTitleText": "Hello World",
+            "backgroundColor": "#eeeeee",
+            "backgroundTextStyle": "light"
+          }
+        }
+      },
+      "platforms": [
+        {
+          "name": "gts4-mini",
+          "deviceSource": 246
+        },
+        {
+          "name": "gtr4-mini-w",
+          "deviceSource": 247
+        }
+      ],
+      "designWidth": 480
+    }
+  },
 	"i18n": {
 		"zh-CN": {
 			"appName": "高考倒计时"
