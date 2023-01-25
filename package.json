@@ -1,12 +1,13 @@
 {
-  "name": "empty",
+  "name": "gaokao-countdown",
   "version": "1.0.0",
-  "description": "",
+  "description": "Zepp OS 高考倒计时小程序。",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bridge": "zeus bridge",
+    "build": "zeus build"
   },
-  "author": "",
+  "author": "LC",
   "license": "ISC",
   "devDependencies": {
     "@zeppos/device-types": "^1.0.0"
