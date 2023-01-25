@@ -1,13 +1,11 @@
 import { TITLE, TIME, TITLE_YEAR, TIME_LINE1, TIME_LINE2 } from './index.style';
-import { createSmoothTimer, stopSmoothTimer } from './smoothTimer';
-import Timer from './timer';
-
+import Timer from "../../../utils/timer"
+import {SmoothTimer, createSmoothTimer, stopSmoothTimer} from "../../../utils/smoothTimer"
 let hmTimer;
 const logger = DeviceRuntimeCore.HmLogger.getLogger('GaoKaoCountdown');
 Page({
 	build() {
 		logger.debug('page build invoked');
-
 		const title_year = hmUI.createWidget(hmUI.widget.TEXT, {
 			text: '加载中',
 			...TITLE_YEAR

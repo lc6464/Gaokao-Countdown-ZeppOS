@@ -1,7 +1,6 @@
 import { TITLE, TIME, TITLE_YEAR, TIME_LINE1, TIME_LINE2 } from './index.style';
-import { createSmoothTimer, stopSmoothTimer } from './smoothTimer';
-import Timer from './timer';
-
+import Timer from "../../../utils/timer"
+import {SmoothTimer, createSmoothTimer, stopSmoothTimer} from "../../../utils/smoothTimer"
 let hmTimer;
 const logger = DeviceRuntimeCore.HmLogger.getLogger('GaoKaoCountdown');
 Page({
