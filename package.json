@@ -4,6 +4,8 @@
   "description": "Zepp OS 高考倒计时小程序。",
   "main": "app.js",
   "scripts": {
+    "dev": "zeus dev",
+    "preview": "zeus preview",
     "bridge": "zeus bridge",
     "build": "zeus build"
   },
